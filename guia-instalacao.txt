@@ -31,5 +31,36 @@ Padronizando nosso código com Eslint + Prettier:
  - seleciona a opção: JSON;
  - seleciona para instalar as dependencias: YES;
  - seleciona a opção de utilização que esteja usando, no meu caso: yarn.
- - ctrl + shift + p, e selecionar: Open user Setting
+ - ctrl + shift + p, e selecionar: Open user Setting e adicionar o seguinte código:
+  "[javascript]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": "always"
+        }
+    },
+    "[javascriptreact]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": "always"
+        }
+    },
+    ;
+- instalar o prettier no projeto também: yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
+- realizar essas modificações dentro do arquivo .eslinttrc.json:
+  "extends": ["airbnb-base","prettier"],
+  "plugins": ["prettier"],
+- criar o aquivo na raiz do projeto chamado .prettierrc.json e adicionar seguinte configurações:
+{
+    "semi":true,
+    "singleQuote":true,
+    "tabWidth":2,
+    "trailingComma":"all",
+    "printWidth":80,
+    "arrowParens":"always"
+};
+
+- padrão MVC o que significa?:
+  Model: É responsável pela leitura e escrita dos dados;
+  View: É camada de interação com o usuário também fazendo a exibição dos dados;
+  Controller: O responsável por receber todas as requisições do usuário, controlando qual MODEL usar e qual VIEW será mostrada ao usuário.  
+
+
 
