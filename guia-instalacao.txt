@@ -1,0 +1,35 @@
+instalação do nodemon:
+ - Depêndencia de desenvolvimento: yarn add nodemon -D;
+ - em package.json alteral "main" para "main:"src/server.js"" e alterar "test" para "dev: "nodemon"";
+ - executar o comando yarn dev para funcionar o servidor.
+
+ **************************************************************
+ instalação do Sucrase: Sucrase nos ajuda utilização as importações de forma mais moderna ex: "const app = require('./app')" para "import app from './app'"
+ - yarn add sucrase -D;
+ - comando para testar: yarn sucrase-node src/server.js;
+ - criar o arquivo na raiz do projeto: nodemon.json;
+ - dentro do arquivo adicionar o codigo:
+ {
+  "execMap":{
+    "js": "node -r sucrase/register"
+  }
+};
+
+- agora mude as importações de seu arquivo ex: "import express from 'express'" e "export default new App().app".
+ **************************************************************
+Padronizando nosso código com Eslint + Prettier:
+ - instalar a extensão dentro do vsCode chamada ESlint;
+ - instalar dentro da aplicação: yarn add eslint -D;
+ - executar o comando para começar o processo de configuração do eslint: yarn eslint --init;
+ - selecionar a opção: To check syntax, find problems, and enforce code style;
+ - selecionar a opção: JavaScript modules (import/export);
+ - seleciona a opção se for back-end: None of these;
+ - seleciona a opção se não estiver usando typescript: NO;
+ - seleciona a opção caso esteja no back-end, para desmarcar a opção utilize o espaço no telcado, o mesmo utilize para marcar: Node;
+ - seleciona a opção: Use a popular style guide;
+ - seleciona a opção, aspas simples,; : Airbnb: https://github.com/airbnb/javascript;
+ - seleciona a opção: JSON;
+ - seleciona para instalar as dependencias: YES;
+ - seleciona a opção de utilização que esteja usando, no meu caso: yarn.
+ - ctrl + shift + p, e selecionar: Open user Setting
+
