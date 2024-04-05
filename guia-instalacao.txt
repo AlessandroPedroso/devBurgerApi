@@ -62,5 +62,15 @@ Padronizando nosso código com Eslint + Prettier:
   View: É camada de interação com o usuário também fazendo a exibição dos dados;
   Controller: O responsável por receber todas as requisições do usuário, controlando qual MODEL usar e qual VIEW será mostrada ao usuário.  
 
+- Docker comandos:
+- docker ps // verifica se está instalado
+- docker run --name test-postgres -d postgres // instala um container do postgress
+- docker run --name dev-burguer-postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres // cria a configuração do banco de dados posrgres
+- docker run --name dev-cadastroUsuarioEvento -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=123W5" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2022-latest
 
+   - COMANDOS DOCKER:
+      - docker ps // lista os containers disponivel
+      - docker ps -all // lista todos containers
+      - docker start "nome do container"// liga o container
+      - docker stop "nome do container" // para de funcionar
 
