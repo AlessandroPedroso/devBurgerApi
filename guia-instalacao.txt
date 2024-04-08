@@ -74,3 +74,12 @@ Padronizando nosso código com Eslint + Prettier:
       - docker start "nome do container"// liga o container
       - docker stop "nome do container" // para de funcionar
 
+- Instalação do Sequelize
+  - yarn add sequelize pg pg-hstore ou yarn add yarn add sequelize tedious #Microsoft SQL Server
+  - yarn add -D sequelize-cli #ajuda no desenvolvimento da utilização do sequelize
+- Criando migrations
+ - yarn sequelize migration:create --name create-users-table # realiza a criação da migration no projeto
+ - yarn sequelize db:migrate # realiza a criação da migration no banco de dados
+ - yarn sequelize db:migrate:undo # desfaz a ultima migration do banco
+  
+
