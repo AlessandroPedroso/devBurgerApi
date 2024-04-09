@@ -10,6 +10,8 @@
     "sourceType": "module"
   },
   "rules": {
-    "prettier/prettier":"off"
+    "prettier/prettier":"off",
+    "class-methods-use-this":"off",
+    "camelcase":"off"
   }
 }

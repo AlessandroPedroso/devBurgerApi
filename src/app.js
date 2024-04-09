@@ -3,6 +3,7 @@
 // const routes = require('./routes')
 import express from 'express';
 import routes from './routes';
+import './databse'
 
 class App {
   constructor() {
