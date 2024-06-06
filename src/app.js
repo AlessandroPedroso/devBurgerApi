@@ -3,7 +3,8 @@
 // const routes = require('./routes')
 import express from 'express';
 import routes from './routes';
-import './databse'
+import './databse';
+import { resolve } from 'node:path';
 
 class App {
   constructor() {
@@ -14,6 +15,7 @@ class App {
 
   middlewares() {
     this.app.use(express.json());
+    this.app.use('/product-file',express.static(resolve(__dirname,'..','uploads')))
   }
 
   routes() {

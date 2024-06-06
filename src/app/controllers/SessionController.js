@@ -7,11 +7,12 @@ class SessionController {
     async store(request, response) {
 
         const schema = Yup.object({
+
             email: Yup.string().email().required(),
             password: Yup.string().min(6).required(),
+            
         })
 
-        
         // se for valido vai retornar TRUE
         const isValid = await schema.isValid(request.body)
         
