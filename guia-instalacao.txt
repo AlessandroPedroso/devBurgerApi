@@ -79,7 +79,8 @@ Padronizando nosso código com Eslint + Prettier:
   - yarn add -D sequelize-cli #ajuda no desenvolvimento da utilização do sequelize
   
 - Criando migrations
- - yarn sequelize migration:create --name create-users-table # realiza a criação da migration no projeto
+ - yarn sequelize migration:create --name create-users-table # realiza a criação da migration no projeto e criação da tabela do banco de dados
+ - yarn Sequelize migration:create --name create-categories-table # outro exemplo de criação da tabela no banco de dados
  - yarn sequelize db:migrate # realiza a criação da migration no banco de dados
  - yarn sequelize db:migrate:undo # desfaz a ultima migration do banco
   
