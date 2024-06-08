@@ -83,5 +83,8 @@ Padronizando nosso código com Eslint + Prettier:
  - yarn Sequelize migration:create --name create-categories-table # outro exemplo de criação da tabela no banco de dados
  - yarn sequelize db:migrate # realiza a criação da migration no banco de dados
  - yarn sequelize db:migrate:undo # desfaz a ultima migration do banco
+ - yarn sequelize migration:create --name remove-categories-column # sempre que precisar excluir uma coluna da tabela no banco precisa criar uma nova migration
+ - yarn sequelize migration:create --name add-category-id-column # realiza a criação da migration para fazer o relacionamento da tabela
+
   
 
