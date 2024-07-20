@@ -1,6 +1,6 @@
 
 import jwt from 'jsonwebtoken'
-import authConfig from '../config/auth'
+import authConfig from '../../config/auth'
 
 export default function authMiddleware(request, response, next) {
 
@@ -14,6 +14,7 @@ export default function authMiddleware(request, response, next) {
     }
 
     const token = authToken.split(' ').at(1)
+    // const [_,token] = authToken.split(' ')[1]
 
     try {
 
@@ -24,8 +25,7 @@ export default function authMiddleware(request, response, next) {
             }
             
             request.userId = decoded.id
-            
-        //  console.log(request.userId)
+            request.userName = decoded.name
             
         })
 

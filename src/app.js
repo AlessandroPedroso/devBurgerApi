@@ -4,6 +4,7 @@
 import express from 'express';
 import routes from './routes';
 import './databse';
+// eslint-disable-next-line import/order
 import { resolve } from 'node:path';
 
 class App {

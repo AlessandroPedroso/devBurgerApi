@@ -10,8 +10,7 @@ class ProductController {
             price: Yup.number().required(),
             category_id: Yup.number().required(),
         })
-
-
+        
         try {
             schema.validateSync(request.body, {
                 abortEarly: false

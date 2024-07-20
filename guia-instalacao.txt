@@ -64,9 +64,9 @@ Padronizando nosso código com Eslint + Prettier:
 
 - Docker comandos:
 - docker ps // verifica se está instalado
-- docker run --name test-postgres -d postgres // instala um container do postgress
-- docker run --name dev-burguer-postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres // cria a configuração do banco de dados posrgres
-- docker run --name dev-cadastroUsuarioEvento -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=123W5" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2022-latest
+- docker run --name dev-burguer-postgres -e POSTGRES_PASSWORD=postgres -p 5432:5432 -d postgres // UTILIZAR ESSA cria a configuração do banco de dados posrgres
+- docker run --name dev-cadastroUsuarioEvento -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=123W5" -p 1433:1433 -d mcr.microsoft.com/mssql/server:2022-latest.
+- docker run --name devburguer-mongo 
 
    - COMANDOS DOCKER:
       - docker ps // lista os containers disponivel
