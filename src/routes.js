@@ -16,17 +16,20 @@ const routes = new Router();
 const uploads = multer(multerConfig)
 
 routes.post('/session', SessionController.store)
-
-routes.use(authMiddleware);
 routes.post('/users', UserController.store);
 
+routes.use(authMiddleware);
 routes.post('/products', uploads.single('file'), ProductController.store);
+routes.put('/products/:id', uploads.single('file'), ProductController.update);
 routes.get('/products', ProductController.index);
 
-routes.post('/categories',CategoryController.store);
+routes.post('/categories',uploads.single('file'),CategoryController.store);
 routes.get('/categories', CategoryController.index);
+routes.put('/categories/:id', uploads.single('file'), CategoryController.update);
 
 routes.post('/orders',OrderController.store);
+routes.get('/orders',OrderController.index);
+routes.put('/orders/:id',OrderController.update);
 
 
 export default routes;
