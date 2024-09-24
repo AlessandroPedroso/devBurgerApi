@@ -6,10 +6,13 @@ import routes from './routes';
 import './databse';
 // eslint-disable-next-line import/order
 import { resolve } from 'node:path';
+import cors from 'cors'
 
 class App {
   constructor() {
     this.app = express();
+    this.app.use(cors());
+    
     this.middlewares();
     this.routes();
   }
