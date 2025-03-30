@@ -1,11 +1,11 @@
-import Sequelize from 'sequelize'
 import mongoose from 'mongoose'
-import configDatabase from '../config/dataBase'
+import Sequelize from 'sequelize'
+import configDatabase from '../config/dataBase.js'
 
 
-import User from '../app/models/Users'
-import Product from '../app/models/Product'
 import Category from '../app/models/Category'
+import Product from '../app/models/Product'
+import User from '../app/models/Users'
 
 const models = [User, Product, Category]
 

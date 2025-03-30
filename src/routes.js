@@ -10,6 +10,7 @@ import authMiddleware from './app/middlewares/auth';
 import ProductController from './app/controllers/ProductController';
 import CategoryController from './app/controllers/CategoryController';
 import OrderController from './app/controllers/OrderController';
+import CreatePaymentIntentController from './app/controllers/Striper/CreatePaymentIntentController';
 
 const routes = new Router();
 
@@ -29,7 +30,11 @@ routes.put('/categories/:id', uploads.single('file'), CategoryController.update)
 
 routes.post('/orders',OrderController.store);
 routes.get('/orders',OrderController.index);
-routes.put('/orders/:id',OrderController.update);
+routes.put('/orders/:id', OrderController.update);
+
+
+// rota de pagamento stripe
+routes.post('/create-payment-intent',CreatePaymentIntentController.store)
 
 
 export default routes;

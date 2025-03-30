@@ -69,7 +69,7 @@ Padronizando nosso código com Eslint + Prettier:
 - docker run --name devburguer-mongo.
 - docker run --name devburguer-mongo -p 27017:27017 -d -t mongo  #imagem do container mongo
 - docker run --name devburguer-mongo -p 27017:27017 -d -t mongo:4.4
-
+:
 
    - COMANDOS DOCKER:
       - docker ps // lista os containers disponivel
